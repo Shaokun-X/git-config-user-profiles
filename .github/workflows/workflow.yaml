@@ -3,9 +3,14 @@ name: cicd
 on:
   push:
     branches: 
-      - 'feature/**' # match an pushes on feature/* and feature/<any sub branch>/*
+      - features/** # match an pushes on feature/* and feature/<any sub branch>/*
       - master
     paths-ignore: # dont run when changes made to these folders 
+      - '.vscode/**'
+  pull_request:
+    branches: 
+      - features/**
+    paths-ignore:
       - '.vscode/**'
 
 jobs:

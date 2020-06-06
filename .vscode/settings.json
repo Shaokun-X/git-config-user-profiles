@@ -21,5 +21,14 @@
     "prettier.useTabs": false,
     "prettier.jsonEnable": [],
     "explorer.compactFolders": false,
+    "cSpell.ignorePaths": [
+        "**/package-lock.json",
+        "**/node_modules/**",
+        "**/vscode-extension/**",
+        "**/.git/objects/**",
+        ".vscode",
+        ".github",
+        "**/*.json"
+    ]
     
 }

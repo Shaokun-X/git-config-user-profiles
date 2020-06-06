@@ -8,8 +8,10 @@ import { Logger } from "../util";
 
 export async function isGitRepository(path: string): Promise<boolean> {
     try {
-        return await sgit(path).checkIsRepo();
+        const result: boolean = await sgit(path).checkIsRepo();
+        return result;
     } catch (error) {
+        Logger.instance.logError(`Unable to detect if ${path} is git repository: ${error.message}`);
         return false;
     }
 }
